@@ -1,6 +1,9 @@
 $ClientID = "your Client ID"
-$TenantID=""
-$ClientSecret=""
+$TenantID="your Tenant ID"
+$ClientSecret="your Secret"
+
+
+#https://learn.microsoft.com/en-us/graph/api/user-update?view=graph-rest-1.0&tabs=http
 
 
 #Authentication
@@ -20,16 +23,23 @@ $headers = @{
 
 
 ########################
+#GET
 $URL="https://graph.microsoft.com/v1.0/users/jasmine.hofmeister@au2mator.com"
+Invoke-RestMethod -Method GET -Uri $URL -Headers $headers
 
+
+
+#SET
 $body=@"
 {
-    "jobTitle": "Customer Manager PDCCONF Demo",
-    "mobilePhone" : "+43 54 56 55 "
+    "jobTitle": "Customer Manager Cloud8 Demo",
+    "mobilePhone" : "+43 664 51515115"
 }
 "@
+
+
 Invoke-RestMethod -Method PATCH -Uri $URL -Headers $headers -Body $body
-Invoke-RestMethod -Method GET -Uri $URL -Headers $headers    
+
 
 
 
