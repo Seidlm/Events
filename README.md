@@ -5,7 +5,7 @@ Michael Seidl aka Techguy
 au2mate everything
 <br>
 https://www.techguy.at
-sync<br>
+<br>
 <a href="https://www.au2mator.com/?utm_source=github&utm_medium=social&utm_campaign=Techguy&utm_content=Events"> au2mator - Self Service Portal for Microsoft Automation (PowerShell, Azure Automation, SCO, SMA)</a>
 
 
@@ -16,6 +16,9 @@ Session: PowerShell and MS Graph API demystified!
 Session: PowerShell and MS Graph API demystified!
 
 ## 2022-09-23 - Cloud8
+Session: PowerShell and MS Graph API demystified!
+
+## 2022-09-30 - Experts Live NL 2022
 Session: PowerShell and MS Graph API demystified!
 
 
