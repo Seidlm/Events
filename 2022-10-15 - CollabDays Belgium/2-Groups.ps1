@@ -1,18 +1,18 @@
-#https://learn.microsoft.com/en-us/graph/api/group-post-members?view=graph-rest-1.0&tabs=http
+#https://learn.micrrosoft.com/en-us/graph/api/group-post-members?view=graph-rest-1.0&tabs=http
 
 # New Azure AD Group
 # Add User to Group
 
-$ClientID = "your ID"
-$TenantID="your Tenant"
-$ClientSecret="your Secret"
-$MSGRAPHAPI_BaseURL="https://graph.microsoft.com/v1.0"
+$ClientID = "yourClientID"
+$TenantID="yourTenantID"
+$ClientSecret="yourSeret"
+$MSGRAPHAPI_BaseURL = "https://graph.microsoft.com/v1.0"
 
 #Variables
-$GroupName="ExpertsLiveNL2022"
-$GroupDescription="Thats my new Group"
+$GroupName = "CDB2022"
+$GroupDescription = "Thats my new Group"
 
-$UserUPN="jasmine.hofmeister@au2mator.com"
+$UserUPN = "jasmine.hofmeister@au2mator.com"
 
 
 #Authentication
@@ -31,18 +31,20 @@ $token_Header = @{
 #########################################
 
 #New Group
-$NewGroup_Body=@"
+$NewGroup_Body = @"
 {
     "description": "$GroupDescription",
     "displayName": "$GroupName",
     "groupTypes": [
-        "Unified"
-      ],
-      "mailEnabled": false,
-      "mailNickname": "library",
-      "securityEnabled": true
+      "Unified"
+    ],
+    "mailEnabled": true,
+    "mailNickname": "library",
+    "securityEnabled": false
 }
 "@
+
+
 
 $NewGroup_Params = @{
     Method = "POST"
@@ -51,7 +53,7 @@ $NewGroup_Params = @{
     body   = $NewGroup_Body
 }
 
-$NewGroup_Result = Invoke-RestMethod @NewGroup_Params
+#$NewGroup_Result = Invoke-RestMethod @NewGroup_Params
 
 
 
@@ -68,7 +70,7 @@ $GetUser_Result = Invoke-RestMethod @GetUser_Params
 
 
 #Add User to Group
-$AddUserToGroup_Body=@"
+$AddUserToGroup_Body = @"
 {
     "@odata.id": "https://graph.microsoft.com/v1.0/directoryObjects/$($GetUser_Result.id)"
 }
@@ -76,10 +78,10 @@ $AddUserToGroup_Body=@"
 
 $AddUserToGroup_Params = @{
     Method = "POST"
-    Uri    = "$MSGRAPHAPI_BaseURL/groups/$($NewGroup_Result.id)/members/`$ref"
+    Uri    = "$MSGRAPHAPI_BaseURL/groups/4ce3bfdf-52b6-41ee-a6de-941745078ebe/members/`$ref"
     header = $token_Header
     body   = $AddUserToGroup_Body
 }
 
-$AddUserToGroup_Result = Invoke-RestMethod @AddUserToGroup_Params
+Invoke-RestMethod @AddUserToGroup_Params
 
