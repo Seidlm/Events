@@ -21,5 +21,9 @@ Session: PowerShell and MS Graph API demystified!
 ## 2022-09-30 - Experts Live NL 2022
 Session: PowerShell and MS Graph API demystified!
 
+## 2023-05-23 - European Collaboration Summit 2023
+Session: PowerShell and MS Graph API demystified!
+
+
 
 See Examples in this Repositority and also at github.com/au2mator
