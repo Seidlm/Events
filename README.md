@@ -24,7 +24,16 @@ Session: PowerShell and MS Graph API demystified!
 ## 2023-05-23 - European Collaboration Summit 2023
 Session: PowerShell and MS Graph API demystified!
 
-## 2024-05-11 - Azure Zeor to Hero
+## 2024-04 - PowerShell + DevOps Global Summit Seattle
+Session: PowerShell and MS Graph API Advanced, from Zero to Hero!
+
+## 2024-06 aMS Brazzaville
 Session: PowerShell and MS Graph API demystified!
+
+## 2024-07 - Microsoft 365 Community Days NYC
+Session: Get started with PowerShell and MS GRAPH API and become a Pro!
+
+
+
 
 See Examples in this Repositority and also at github.com/au2mator
