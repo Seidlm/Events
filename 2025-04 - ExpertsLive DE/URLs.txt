@@ -1,0 +1,14 @@
+Mail Monitoring
+- https://www.techguy.at/mail-alerting-on-azure-automation-accounts/
+
+Montitor Secret, Cert Expire
+- https://www.techguy.at/monitor-your-azure-secrets-zerts-and-spns-expire-date-with-powershell/
+
+Podcast
+- https://michaelseidl.info/podcast/
+
+Logging Function
+- https://github.com/Seidlm/PowerShell-Templates/blob/main/Logging%20Function.ps1
+
+Azure Key Vault
+- https://www.techguy.at/using-azure-key-vault-to-store-your-azure-automation-credentials-and-secrets/
